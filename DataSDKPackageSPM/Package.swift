@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "DataSDKPackageSPM",
-            targets: ["DataSDKPackageSPM"]),
+            targets: ["DataSDKPackageSPM", "StyliticsData"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,5 +24,6 @@ let package = Package(
         .testTarget(
             name: "DataSDKPackageSPMTests",
             dependencies: ["DataSDKPackageSPM"]),
+        .binaryTarget(name: "StyliticsData", path: "Artifacts/StyliticsData.xcframework.zip")
     ]
 )
